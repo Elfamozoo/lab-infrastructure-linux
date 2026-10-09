@@ -36,7 +36,7 @@
   - [11.4. Installation de LogAnalyzer. Installation de LogAnalyzer](#114-installation-de-loganalyzer-installation-de-loganalyzer)
 ## 6. Configuration DNS avec BIND9
 
-Pour une infrastructure complète, un DNS interne <domaine> résout noms et IP.
+Pour une infrastructure complète, un DNS interne `<domaine>` résout noms et IP.
 
 ### 6.1 Pré-requis DNS
 
@@ -56,7 +56,7 @@ apt update && apt install bind9 dnsutils
 
 ### 6.4 Fichiers des zones
 
-- Zone directe <domaine>
+- Zone directe `<domaine>`
 
 ![image-17.png](assets/image-17.png)
 
@@ -188,7 +188,7 @@ Avantages : modularité, communauté active, large documentation.
 ### 8.3 Configuration de base
 
 - Définir ServerName pour éviter les erreurs au démarrage :
-echo "ServerName <domaine>" >> /etc/apache2/apache2.conf
+echo "ServerName `<domaine>`" >> /etc/apache2/apache2.conf
 
 - Tester la configuration :
 apache2 -t
@@ -256,8 +256,8 @@ Il s’agit de la méthode recommandée et aussi la plus utilisée puisqu’il e
 Plusieurs noms DNS sont associés à une seule adresse IP et correspondent à plusieurs sites web.
 
 - Sur le serveur DNS nous allons ajouter à la zone de recherche direct le serveur DNS et les 2 sites (on va utiliser le CNAME).
-- L’URL site1.<domaine> sera utilisée pour le site 1.
-- L’URL site2.<domaine> sera utilisée pour le site 2.
+- L’URL site1.`<domaine>` sera utilisée pour le site 1.
+- L’URL site2.`<domaine>` sera utilisée pour le site 2.
 
 ![image-38.png](assets/image-38.png)
 
@@ -407,7 +407,7 @@ Pour fournir un service de messagerie interne complet (SMTP, IMAP) et webmail, n
 
 VM Debian avec IP statique (ex. 10.10.10.4).
 
-Nom de domaine interne (mail.<domaine>) pointant vers cette IP via DNS.
+Nom de domaine interne (mail.`<domaine>`) pointant vers cette IP via DNS.
 
 Paquets : postfix, mailutils, dovecot-core, dovecot-imapd, apache2, php, libapache2-mod-php.
 
@@ -421,7 +421,7 @@ apt install postfix mailutils dovecot-core dovecot-imapd apache2 php libapache2-
 - Pendant l’installation de Postfix :
 Sélectionnez **Internet Site**.
 
-- Entrez le nom de domaine **mail.<domaine>**.
+- Entrez le nom de domaine **mail.`<domaine>`**.
 
 ![image-49.png](assets/image-49.png)
 
@@ -506,13 +506,13 @@ rm index.html
 curl -sL https://repository.rainloop.net/installer.php | php
 ```
 
-- Accédez ensuite à : http://mail.<domaine>/?admin
+- Accédez ensuite à : http://mail.`<domaine>`/?admin
 
 ```
 **User** : admin / **Password** : <MOT_DE_PASSE>
 ```
 
-- Ajoutez le domaine <domaine> avec serveur IMAP/SMTP 127.0.0.1.
+- Ajoutez le domaine `<domaine>` avec serveur IMAP/SMTP 127.0.0.1.
 
 ![image-57.png](assets/image-57.png)
 
