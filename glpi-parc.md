@@ -16,7 +16,7 @@
   - [15.2 Création de l'annuaire LDAP dans GLPI](#152-création-de-lannuaire-ldap-dans-glpi)
   - [15.3 Importer les utilisateurs depuis l’Active Directory](#153-importer-les-utilisateurs-depuis-lactive-directory)
 - [16. Activer la synchronisation automatique LDAP](#16-activer-la-synchronisation-automatique-ldap)
-- [17. Déploiement de l’agent GLPI via GPO sur ton <SERVEUR>](#17-déploiement-de-lagent-glpi-via-gpo-sur-ton-serveur)
+- [17. Déploiement de l’agent GLPI via GPO sur ton `<SERVEUR>`](#17-déploiement-de-lagent-glpi-via-gpo-sur-ton-serveur)
   - [17.1 Préparer le fichier MSI](#171-préparer-le-fichier-msi)
   - [17.2 Créer un script de déploiement silencieux](#172-créer-un-script-de-déploiement-silencieux)
   - [17.3 Créer une GPO de démarrage](#173-créer-une-gpo-de-démarrage)
@@ -128,7 +128,7 @@ systemctl restart apache2
 
 On va maintenant se connecter à GLPI via le navigateur et finaliser son installation.
 
-- Ouvrez votre navigateur sur http://<IP_SERVEUR> ici 10.10.10.6
+- Ouvrez votre navigateur sur http://`<IP_SERVEUR>` ici 10.10.10.6
 - Sélectionner Français puis OK
 
 ![image-92.png](assets/image-92.png)
@@ -347,7 +347,7 @@ Les utilisateurs supprimés dans l'AD sont désactivés dans GLPI (selon config)
 
 ![image-120.png](assets/image-120.png)
 
-## 17. Déploiement de l’agent GLPI via GPO sur ton <SERVEUR>
+## 17. Déploiement de l’agent GLPI via GPO sur ton `<SERVEUR>`
 
 ### 17.1 Préparer le fichier MSI
 
@@ -355,7 +355,7 @@ Télécharge l’agent GLPI depuis :https://github.com/glpi-project/glpi-agent/r
 
 Copie le fichier .msi (ex. glpi-agent-1.15-x64.msi) dans un dossier partagé accessible à tous les postes :
 
-Exemple : \\<SERVEUR>\partages\glpi-agent\glpi-agent-1.15-x64.msi
+Exemple : \\`<SERVEUR>`\partages\glpi-agent\glpi-agent-1.15-x64.msi
 
 - Assure-toi que **« Tout le monde » a un accès en lecture** sur ce partage
 
@@ -371,7 +371,7 @@ Place ce script dans un dossier accessible (ex. : \\DC1\partages\scripts)
 
 ### 17.3 Créer une GPO de démarrage
 
-Ouvre **« Gestion des stratégies de groupe »** sur ton <SERVEUR>(gpmc.msc)
+Ouvre **« Gestion des stratégies de groupe »** sur ton `<SERVEUR>`(gpmc.msc)
 
 Cliquez droit sur l’unité d’organisation (OU) ciblée → **Créer une GPO**
 

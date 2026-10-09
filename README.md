@@ -59,6 +59,6 @@ Remontée des logs et inventaire GLPI
 
 Intégration à un domaine AD
 
-Contrôleur de domaine Active Directory (<SERVEUR>) sous Windows Server
+Contrôleur de domaine Active Directory (`<SERVEUR>`) sous Windows Server
 
 Pour LDAP, GPO, et déploiement d’agents GLPI
